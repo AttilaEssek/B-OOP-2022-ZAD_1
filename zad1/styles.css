@@ -27,34 +27,45 @@ body {
     font-size: 25px;
   }
   p {
-    color: red;
+    color: black;
     margin-top: 0px;
     margin-bottom: 0px;
-    height: auto;
+    margin-left: 15px;
   }
 
   article {
     color: black;
     background-color: khaki;
     margin-top: 0px;
-    height: auto;
+    padding-left: 15px;
+    width: 70%;
   }
 aside {
     float: right;
+    text-align: center;
     color: black;
     background-color: darkgoldenrod;
     text-align: center;
     padding-right: 50px;
     height:max-content;
+    width: 30%;
+    height: 100%;
 }
 footer {
     color: black;
     background-color: chocolate;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td{
+  width: 9%;
+}
 
- /* @media (max-width: 600px) {
+  @media (max-width: 600px) {
     nav, article, aside {
       width: 100%;
       height: auto;
     }
-}*/
+}
