@@ -11,35 +11,39 @@ body {
   .toph1{
     color: blue;
     background-color: burlywood;
+    flex-grow: 1;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     padding-bottom: 30px;
     padding-top: 15px;
     margin-bottom: 0px;
     margin-top: 0px;
     font-size: 35px;
-    width: 100%;
+    width: 98.95%;
     position:fixed;
     top:0;
+    z-index: 4;
   }
   nav {
     color: black;
     background-color: chocolate;
+    flex-grow: 1;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 0px;
     margin-top: 0px;
     font-size: 25px;
-    width: 100%;
+    width: 98.95%;
     position:fixed;
     top:70px;
+    z-index: 5;
   }
   section{
     background-color: khaki;
     padding-top: 100px;
-    height: 100vh;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
   }
   .tbl{
@@ -47,8 +51,26 @@ body {
     margin-left: 15px;
     margin-right: 15px;
   }
-  p {
+  .quote{
+    background-color:rgba(220, 20, 60, 0.5);
     color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+  .text {
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .footertext {
+    color: black;
+    text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 15px;
@@ -58,11 +80,7 @@ body {
   article {
     color: black;
     background-color: khaki;
-    /*margin-top: 0px;*/
-    /*margin:auto;*/
     flex-grow: 1;
-    padding-left: 15px;
-    /*padding-bottom: 25%;*/
     width: 70%;
   }
 aside {
@@ -72,34 +90,123 @@ aside {
     background-color: darkgoldenrod;
     text-align: center;
     flex-grow: 1;
-    height:max-content;
+    padding-top: 50px;
     width: 30%;
+    min-height: 100vh;
     height: 100%;
 }
 .ftr{
   color: black;
   background-color: chocolate;
   text-align: center;
-  width: 100%;
+  width: 98.95%;
   position:fixed;
   bottom:0;
   }
-/*footer {
-    color: black;
-    background-color: chocolate;
-    /*margin-top: auto;
-}*/
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
 th, td{
   width: 9%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+tr:nth-child(even){
+  background-color: antiquewhite;
+}
+tr:nth-child(odd){
+  background-color: darkseagreen;
+}
+.lecture{
+  background-color:lawngreen;
+}
+.practice{
+  background-color: aquamarine;
+}
+.days_hours{
+  background-color: darkolivegreen;
 }
 
-  @media (max-width: 600px) {
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 500px;
+  width: 100%;
+  height: 900px;
+  align-items:center;
+  justify-content: center;
+}
+
+.flex-container > div {
+  background-color:blanchedalmond;
+  min-width: 300px;
+  width: 40%;
+  height: 80%;
+  margin: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 17px;
+}
+.cv-left{
+  text-align:left;
+  margin-left: 15px;
+  margin-top: 40px;
+}
+.cv-right{
+  text-align: left;
+  margin-left: 15px;
+  line-height: 20px;
+}
+.image{
+  float:left;
+  width: auto;
+  height: auto;
+  margin: 15px;
+  border: 5px solid #555;
+  border-radius: 15px;
+}
+/*.image-cv{
+  float:left;
+  width: auto;
+  height: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  border: 5px solid #555;
+  border-radius: 15px;
+}*/
+
+  /*@media (max-width: 600px) {
     nav, article, aside {
       width: 100%;
       height: auto;
     }
+}*/
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 2000%;
+  background-color: rgba(220, 20, 60, 0.7);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  /*bottom: 100%;*/
+  right: 100%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
