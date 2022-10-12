@@ -1,6 +1,3 @@
-* {
-    box-sizing: border-box;
-  }
 body {
     background-color: powderblue;
     min-height: 100vh;
@@ -39,6 +36,9 @@ body {
     top:0;
     z-index: 4;
   }
+  .toph2{
+    margin-left: 10px;
+  }
   nav {
     color: black;
     background-color: chocolate;
@@ -72,6 +72,7 @@ body {
   .quote{
     background-color:rgba(220, 20, 60, 0.5);
     color: black;
+    font-family: "roboto-slab-thin";
     padding-top: 5px;
     padding-bottom: 5px;
     margin-left: 15px;
@@ -80,15 +81,6 @@ body {
   }
   .text {
     color: black;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-
-  .footertext {
-    color: black;
-    text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 15px;
@@ -116,6 +108,7 @@ aside {
 .ftr{
   color: black;
   background-color: chocolate;
+  font-family: "roboto-slab-normal";
   text-align: center;
   width: 98.95%;
   position:fixed;
@@ -124,11 +117,15 @@ aside {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  font-size:1vw;
 }
 th, td{
   width: 9%;
   padding-top: 3px;
   padding-bottom: 3px;
+}
+#firstrow{
+  background-color: darkolivegreen;
 }
 tr:nth-child(even){
   background-color: antiquewhite;
@@ -189,34 +186,26 @@ tr:nth-child(odd){
   border: 5px solid #555;
   border-radius: 15px;
 }
-/*.image-cv{
-  float:left;
-  width: auto;
-  height: auto;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-top: 15px;
-  border: 5px solid #555;
-  border-radius: 15px;
-}*/
 
-  /*@media (max-width: 600px) {
-    nav, article, aside {
-      width: 100%;
-      height: auto;
-    }
-}*/
+#bigdiv{
+  position: relative;
+}
 
 .tooltip {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black;
+  width: 1%;
+  height: 1%;
+  border-radius: 15px;
+  background-color: rgba(138, 9, 9, 0.8);
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 15%;
   min-width: 200px;
+  font-size: 2vh;
   background-color: rgba(220, 20, 60, 0.7);
   color: #fff;
   text-align: center;
@@ -233,6 +222,38 @@ tr:nth-child(odd){
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  z-index: 6;
+}
+
+.interactiveimages{
+  width: 100%;
+  height: auto;
+}
+
+#waterdeep{
+  position: absolute;left: 44.8%;top: 36.5%;
+}
+#pattingimg{
+  border: 5px solid #555;
+  border-radius: 15px;
+  width: 90%;
+  height: auto;
+}
+
+#baldursgate{
+  position: absolute;left: 52%;top: 64%;
+}
+
+#neverwinter{
+  position: absolute;left: 39.5%;top: 20%;
+}
+
+#anauroch{
+  position: absolute;left: 74%;top: 42%;
+}
+
+#icewinddale{
+  position: absolute;left: 35%;top: 6%;
 }
 
 a:link {
